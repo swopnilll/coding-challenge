@@ -1,13 +1,16 @@
 # RewardPay Coding Challenge
 
 ## Overview
+
 An application built using **TypeScript** to calculate and display accounting metrics from provided financial data.
 
 ## Technologies Used
+
 - **TypeScript**
 - **Jest** (for testing)
 
 ## Project Structure
+
 Here's the structure of the project:
 
 ```
@@ -34,21 +37,25 @@ coding-challenge/
 ## Setup and Installation
 
 1. **Clone the repository**:
+
    ```bash
    git clone https://github.com/swopnilll/coding-challenge.git
    ```
 
 2. **Navigate to the project directory**:
+
    ```bash
    cd coding-challenge
    ```
 
 3. **Install dependencies**:
+
    ```bash
    npm install
    ```
 
 4. **Build the project**:
+
    ```bash
    npm run build
    ```
@@ -59,17 +66,13 @@ coding-challenge/
    ```
 
 ## Usage
+
 To run the application and calculate the accounting metrics, execute:
 
 ```bash
-node dist/index.js
+npm start
 ```
 
 ## Author
+
 Swopnil Acharya
-
-
-
-
-
-

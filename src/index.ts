@@ -1,25 +1,22 @@
-import * as path from 'path';
-import { readJsonData } from './utils/dataLoader';
-import { calculateFinancialMetrics } from './calculations/calc';
+import { readJsonData } from "./utils/dataLoader";
 
+import { IAccount } from "./interfaces/IAccount";
 
-// Example usage: assuming `data.json` is in the same directory as this script
-const filePath = 'data.json';
+import { handleGeneralLedgerCalculations } from "./operations/generalLedger";
 
-const data = readJsonData(filePath);
+const filePath = "data.json";
+
+const data: IAccount | null = readJsonData(filePath);
 
 if (data) {
-  const {revenue,
-    expenses,
-    grossProfitMargin,
-    netProfitMargin,
-    workingCapitalRatio} = calculateFinancialMetrics(data);
+  switch (data.object_category) {
+    case "general-ledger":
+      handleGeneralLedgerCalculations(data);
+      break;
 
-    console.log({revenue,
-        expenses,
-        grossProfitMargin,
-        netProfitMargin,
-        workingCapitalRatio})
+    default:
+      break;
+  }
 } else {
-  console.log('Failed to read or parse the data.');
+  console.log("Failed to read or parse the data.");
 }

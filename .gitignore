@@ -6,7 +6,8 @@ dist/
 
 # TypeScript configuration files
 *.tsbuildinfo
-tsconfig.json
+# Ensure tsconfig.json is tracked
+# tsconfig.json (remove the comment if it's ignored)
 
 # Log files
 npm-debug.log*
@@ -39,7 +40,7 @@ build/
 # Dependency directories
 jspm_packages/
 
-# TypeScript
+# TypeScript definition files
 *.d.ts
 
 # Debugger files
